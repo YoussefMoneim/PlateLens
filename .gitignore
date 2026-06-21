@@ -1,0 +1,23 @@
+# Environment
+.env
+venv/
+env/
+*.pyc
+__pycache__/
+.Python
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets / keys
+*.key
+secrets.json
+
+# Uploads / temp
+uploaded_image.jpg
+*.log

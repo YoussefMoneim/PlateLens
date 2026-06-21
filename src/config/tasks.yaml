@@ -1,0 +1,40 @@
+ingredient_detection_task:
+  description: >
+    Analyze the uploaded food image at path '{uploaded_image}' and extract a comprehensive
+    list of all visible ingredients. First use the Extract ingredients tool to identify
+    raw ingredients from the image, then use the Filter ingredients tool to clean and
+    normalize the list. Return a clean, comma-separated list of ingredients.
+  expected_output: >
+    A clean, comma-separated list of ingredients identified in the image.
+    Example: "chicken breast, broccoli, olive oil, garlic, lemon, salt, pepper"
+
+dietary_filtering_task:
+  description: >
+    Review the list of extracted ingredients and filter them based on the dietary
+    restriction: '{dietary_restrictions}'. If no dietary restriction is provided,
+    return the original list unchanged. Use the dietary filtering tool to ensure
+    compliance. Return only the ingredients that are safe and appropriate.
+  expected_output: >
+    A filtered list of ingredients that comply with the dietary restrictions.
+    If no restrictions provided, return the original ingredient list unchanged.
+
+nutrient_analysis_task:
+  description: >
+    Analyze the food image at path '{uploaded_image}' and provide a comprehensive
+    nutritional breakdown. Use the nutritional analysis tool to identify the dish,
+    estimate portion size, calculate total calories, and break down macronutrients
+    (protein, carbohydrates, fats), vitamins, and minerals. Include a health evaluation.
+  expected_output: >
+    A detailed nutritional analysis including: dish name, portion size, estimated calories,
+    macronutrient breakdown (protein, carbs, fats), vitamins, minerals, and a health
+    evaluation paragraph.
+
+recipe_suggestion_task:
+  description: >
+    Based on the filtered ingredients provided, create 3 creative and practical recipe
+    suggestions. Each recipe must include a title, complete ingredients list, step-by-step
+    cooking instructions, and a calorie estimate per serving. Make recipes accessible for
+    home cooks and respect any dietary restrictions: '{dietary_restrictions}'.
+  expected_output: >
+    Three complete recipe suggestions, each with: title, ingredients list, step-by-step
+    instructions, and calorie estimate per serving.
